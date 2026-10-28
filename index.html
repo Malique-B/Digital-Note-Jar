@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretty Girl ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Background Hearts -->
+    <div id="heart-bg-container"></div>
+
+    <div class="container">
+        <h1>For My Pretty Girl 💖</h1>
+        <p class="subtitle">Tap the jar to pull out a sweet reminder!</p>
+
+        <!-- Jar Visual -->
+        <div class="jar-container" id="jar" onclick="pullNote()">
+            <div class="jar-lid"></div>
+            <div class="jar" id="jar-notes">
+                <!-- JS will fill mini folded notes here -->
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+            <button class="btn" onclick="pullNote()">Pull a Note ✨</button>
+            <button class="btn btn-secondary" onclick="toggleGallery()">View All Unlocked 📜</button>
+        </div>
+
+        <!-- Saved Notes List -->
+        <div class="gallery-view" id="gallery">
+            <!-- JS populates unlocked notes here -->
+        </div>
+    </div>
+
+    <!-- Note Popup Modal -->
+    <div class="modal-overlay" id="modal">
+        <div class="note-card">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <span style="font-size: 2.5rem;">💌</span>
+            <div class="note-text" id="modal-text">You mean the absolute world to me!</div>
+            <button class="btn" onclick="closeModal()">Keep It in My Heart 💕</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
